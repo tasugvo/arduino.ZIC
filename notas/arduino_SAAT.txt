@@ -1,0 +1,18 @@
+O arduino no SAAT so realiza o controle do ISD1820, funciona como uma forma de interface, tanto que é possivel perceber que não há nenhuma interface i/o diretamente conectada ao arduino.
+
+Principais portas e funções:
+
+- GND, digital side: terra da cahave repeat
+- D5: controla a chave/ rele de repeat da ISD, para quando ligado n reproduzir diretamente o audio ou ate n deixar ele acionar o audio nunca 
+- D7: PTT
+- D8: playL
+- GND, analog side: power
+- + 5V: power
+
+
+PlayL - aciona modo de loop da ISD1820, e tem q ficar dando input para funcionar
+PlayE - reproduz o audio gravado apenas uma vez 
+
+arduino inicia primeiro setup para inicia portas da controladora e passa para a parte loop() ficando em um loop eterno.
+O ISD1820 usado no texte grava por exatos 10 segundos 
+
